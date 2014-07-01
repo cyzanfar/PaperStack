@@ -85,12 +85,25 @@ Rails.application.configure do
   #Note to set this to your actual host
   config.action_mailer.default_url_options = { host: 'http://omr-photoshare.herokuapp.com/' }
 # sets paperclip to upload image to aws
-  config.paperclip_defaults = {
-    :storage => :s3,
-    :s3_credentials => {
-      :bucket => ENV['S3_BUCKET_NAME'],
-      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-    }
-  }
+  # config.paperclip_defaults = {
+  #   :storage => :s3,
+  #   :s3_credentials => {
+  #     :bucket => ENV['S3_BUCKET_NAME'],
+  #     :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+  #     :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+  #   }
+  # }
+
+
+
+Paperclip::Attachment.default_options.merge!({
+    storage: :s3,
+    s3_credentials: {
+        access_key_id: ENV['S3_KEY'],
+        secret_access_key: ENV['S3_SECRET'],
+        bucket: "#{ENV['S3_BUCKET']}-#{Rails.env}"
+        },
+    url: ":s3_domain_url",
+    path: "/:class/:attachment/:id_partition/:style/:filename"
+    })
 end
