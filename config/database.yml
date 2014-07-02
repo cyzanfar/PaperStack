@@ -16,8 +16,8 @@ test:
 production:
   adapter: postgresql
   encoding: utf8
-  database: d48scs1aa1i0p6
+  database: d63g7d4m154gvh
   pool: 5432
-  username: fbtvbqqkamfdgt   #-> *** data from heroku's postgres user details page
-  password: YO7aoMMlX8jz4HnEqaxylKKYNz
-  host: ec2-107-20-234-127.compute-1.amazonaws.com
+  username: kawrfcedajnlpn  #-> *** data from heroku's postgres user details page
+  password: SphxwHxRvqVot0xksQiQkFmVUS
+  host: ec2-54-197-241-97.compute-1.amazonaws.com
