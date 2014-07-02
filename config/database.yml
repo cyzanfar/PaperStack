@@ -13,11 +13,11 @@ test:
   <<: *default
   database: db/test.sqlite3
 
-production:
-  adapter: postgresql
-  encoding: utf8
-  database: d63g7d4m154gvh
-  pool: 5432
-  username: kawrfcedajnlpn  #-> *** data from heroku's postgres user details page
-  password: SphxwHxRvqVot0xksQiQkFmVUS
-  host: ec2-54-197-241-97.compute-1.amazonaws.com
+# production:
+#   adapter: postgresql
+#   encoding: utf8
+#   database: d63g7d4m154gvh
+#   pool: 5432
+#   username: kawrfcedajnlpn  #-> *** data from heroku's postgres user details page
+#   password: SphxwHxRvqVot0xksQiQkFmVUS
+#   host: ec2-54-197-241-97.compute-1.amazonaws.com
