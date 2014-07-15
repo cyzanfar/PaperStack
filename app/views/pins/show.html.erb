@@ -11,8 +11,11 @@
       <div class="panel-body">
         <p><%= @pin.description %></p>
         <p><strong><%= @pin.user.name if @pin.user %></strong></p>
+        <p><%= link_to "My document", @pin.document.url, target: "_blank" %></p>
+
         
          <p><%= link_to "My document", @pin.document.url, target: "_blank" %></p>
+
 
         <% if @pin.user == current_user %>
          <%= link_to edit_pin_path(@pin) do %>
