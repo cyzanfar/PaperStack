@@ -1,9 +1,12 @@
 <div class='jumbotron center'>
-<h1>Welcome to my app</h1>
+<h1>Welcome to <span style="color: #e74c3c">P</span>aper<span style="color: #e67e22">S</span>tack</h1>
+<i>A place where you can publish your papers and get feedback on them</i>
+  <p> <%= link_to "learnmore", about_path, class: "btn btn-primary btn-lg learn-more" %>
+  </p>
 
+</div>
 
-<p> <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-danger' %> or <%= link_to "Log in", new_user_session_path, class: 'btn btn-default' %> </p>
-
-
+<div class='jumbotron center'>
+	<p> <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-danger' %> or <%= link_to "Log in", new_user_session_path, class: 'btn btn-default' %> </p>
 
 </div>
