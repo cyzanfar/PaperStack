@@ -38,7 +38,7 @@ class PinsController < ApplicationController
     @pin.destroy
     redirect_to pins_url
   end
-
+  
   private
     
     def set_pin
