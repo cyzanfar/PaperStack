@@ -4,14 +4,13 @@
 
 <div class="row">
   <div class="col-md-offset-2 col-md-8">
-    <div class="panel panel-default">
-      <div class="panel-heading center">
-        <%= image_tag @pin.image.url(:medium) %>
+    <div class="panel panel-info">
+      <div class="panel-heading">
+          <span class="left"><%= image_tag @pin.image.url(:medium) %></span>
       </div>
       <div class="panel-body">
-        <p><%= @pin.description %></p>
+        <p><h4><i>Title:    </i><%= @pin.description %></h4></p>
         <p><strong><%= @pin.user.name if @pin.user %></strong></p>
-        <p><%= link_to "External link", " http://foo.bar", target: "_blank" %></p>
         <p><%= link_to "My document", @pin.document.url, target: "_blank" %></p>
 
 

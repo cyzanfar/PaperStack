@@ -1,5 +1,4 @@
-
-@import 'bootstrap';
+ @import 'bootstrap';
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
 $body-bg:                                                   #ecf0f1;
@@ -14,6 +13,14 @@ $link-color: #e74c3c;
 
 .center {
      text-align: center;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
 }
 
 .navbar-brand {
