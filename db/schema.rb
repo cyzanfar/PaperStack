@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140718220540) do
+ActiveRecord::Schema.define(version: 20140725062525) do
 
   create_table "pins", force: true do |t|
     t.string   "description"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20140718220540) do
     t.integer  "document_file_size"
     t.datetime "document_updated_at"
     t.text     "description_text"
+    t.text     "paper"
   end
 
   add_index "pins", ["user_id"], name: "index_pins_on_user_id"

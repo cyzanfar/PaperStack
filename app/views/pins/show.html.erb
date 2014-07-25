@@ -14,7 +14,7 @@
           </div>
 
           <div class="panel-body scrollable-body">
-              <%= @pin.description.html_safe %>
+              <%= @pin.paper.html_safe %>
           </div>
               <% if @pin.user == current_user %>
                 <%= link_to edit_pin_path(@pin) do %>
