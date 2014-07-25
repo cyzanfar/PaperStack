@@ -13,33 +13,42 @@
 
   
 <div class="row">
-  <div class="col-md-6">
-    <div class="form-group">
-      <%= f.label :document %> <span class="glyphicon glyphicon-file"></span>
-      <%= f.file_field :document, class: "form-control" %>
+  <div class="col-md-8">
+    <div class="form-group has-error">
+            <%= f.label :Title %><br>
+            <%= f.text_field :description, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :image %> <span class="glyphicon glyphicon-picture"></span>
-      <%= f.file_field :image, class: "form-control" %>
+            <%= f.label :description %><br>
+            <%= f.text_area :description, :class => "tinymce", :rows => 30, :cols => 50 %>
     </div>
-     <div class="form-group">
-        <%= f.submit :class => 'btn btn-danger' %>
-      </div>
   </div>
-  <div class="col-md-6">
-     <div class="jumbotron">
-        <div class="form-group has-error">
-          <%= f.label :Title %><br>
-          <%= f.text_field :description, class: "form-control" %>
-        </div>
+</div>
 
-        <div class="form-group has-error">
-          <%= f.label :Notes %><br>
-          <%= f.text_area :description_text, class: "form-control" %>
+  <div class="col-md-7">
+      <div class="form-group has-error">
+            <%= f.label :Notes %><br>
+            <%= f.text_area :description_text, class: "form-control notes-height" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :document %> <span class="glyphicon glyphicon-file"></span>
+        <%= f.file_field :document, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :image %> <span class="glyphicon glyphicon-picture"></span>
+        <%= f.file_field :image, class: "form-control" %>
+      </div>
+       <div class="form-group">
+          <%= f.submit :class => 'btn btn-danger' %>
         </div>
-     </div>
-  </div>
+    </div>
+    
+
+          
+       </div>
+    </div>
 
 </div>
 <% end %>
+<%= tinymce %>
 

@@ -25,7 +25,7 @@ $link-color: #e74c3c;
 
 .navbar-brand {
      font-weight: bold;
-     font-family: HANDYHANDY;
+     font-family: sans-serif;
      font-size: 38px;
 }
 
@@ -37,3 +37,25 @@ $link-color: #e74c3c;
 .jumbotron-about {
 	background: #e74c3c;
 }
+
+
+
+.paper {
+
+	background: #e67e22;
+}
+
+.notes-height {
+	height: 200px;
+}
+
+.scrollable-body {
+	 height: 400px;
+    overflow: scroll;
+}
+
+.panel-heading {
+	text-align: block;
+}
+
+

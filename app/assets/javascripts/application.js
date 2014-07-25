@@ -13,6 +13,7 @@
 //= require jquery
 //= require bootstrap
 //= require jquery_ujs
+//= require tinymce-jquery
 //= require jquery.turbolinks
 //= require turbolinks
 //= require masonry/jquery.masonry
