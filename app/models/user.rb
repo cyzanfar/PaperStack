@@ -8,4 +8,6 @@ class User < ActiveRecord::Base
   
   validates :name, presence: true
 
+  acts_as_commontator
+
 end

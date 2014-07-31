@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :pins
 
+  mount Commontator::Engine => '/commontator'
  
 
   devise_for :users
