@@ -29,6 +29,9 @@ $link-color: #e74c3c;
      font-size: 38px;
 }
 
+.box {
+	 vertical-align: middle;
+}
 .learn-more {
 
 	margin-top: 20px
@@ -54,9 +57,6 @@ $link-color: #e74c3c;
     overflow: scroll;
 }
 
-.panel-heading {
-	text-align: block;
-}
 
 .note-background {
 	background: #27ae60;
