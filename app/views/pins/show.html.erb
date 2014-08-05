@@ -7,28 +7,26 @@
         <div class="panel panel-default"> 
           <div class="panel-heading center">
             <div class="box">
-            <%= image_tag @pin.image.url(:medium) %>
+             <%= image_tag @pin.image.url(:medium) %>
+               <ul>
+                  <li><i>Username </i> <strong><%= @pin.user.name if @pin.user %></strong>
+                  <li><i>Document </i> <%= link_to "My document", @pin.document.url, target: "_blank" %></li> 
+                  
+                     <% if @pin.user == current_user %>
+                      <%= link_to edit_pin_path(@pin) do %>
+                        <span class="glyphicon glyphicon-edit"></span>
+                        Edit
+                      <% end %>
+                    <% end %>
+                   
+               </ul> 
             </div>
-            <div class="box">
-             <ul>
-                <li><i>Username </i> <strong><%= @pin.user.name if @pin.user %></strong>
-                <li><i>Document </i> <%= link_to "My document", @pin.document.url, target: "_blank" %></li> 
-             </ul> 
-           </div>
-           
-           
           </div>
 
           <div class="panel-body scrollable-body">
               <%= @pin.paper.html_safe %>
           </div>
-              <% if @pin.user == current_user %>
-                <%= link_to edit_pin_path(@pin) do %>
-                <span class="glyphicon glyphicon-edit"></span>
-                    Edit
-                <% end %>
-              <% end %>
-
+             
           
         </div>
       

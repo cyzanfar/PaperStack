@@ -153,7 +153,7 @@ Commontator.configure do |config|
   #   :s  (star ratings)
   #   :r  (reputation system)
   # Default: :n
-  config.comment_voting = :n
+  config.comment_voting = :ld
 
   # vote_count_proc
   # Type: Proc

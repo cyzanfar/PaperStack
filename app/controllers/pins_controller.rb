@@ -8,6 +8,7 @@ class PinsController < ApplicationController
   end
 
   def show
+    commontator_thread_show(@pin)
   end
 
   def new
