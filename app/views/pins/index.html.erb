@@ -3,7 +3,7 @@
  <div id="pins" class="transitions-enabled">
   <% @pins.each do |pin| %>
     <div class="box panel panel-default">
-        <%= link_to image_tag(pin.image.url(:thumb)), pin %>
+        <%= link_to image_tag(pin.image.url(:medium)), pin %>
       <div class="panel-body">
          <p><%= pin.description %></p>
         <i>By: </i><strong><%= pin.user.name if pin.user %></strong> </br>
