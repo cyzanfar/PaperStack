@@ -29,6 +29,7 @@
                  :locals => {:comment => comment,
                              :user => user} %>
     </span>
+    
     <div id="comment_<%= comment.id.to_s %>_body_div" class="comment_body">
       <%= render :partial => 'commontator/comments/body',
                  :locals => {:comment => comment} %>

@@ -105,6 +105,7 @@ module Commontator
       thread.can_be_read_by?(user)
     end
 
+  
     def can_be_voted_on?
       !thread.is_closed? && !is_deleted? &&\
       thread.config.comment_voting.to_sym != :n && is_votable?

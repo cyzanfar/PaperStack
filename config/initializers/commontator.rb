@@ -93,7 +93,7 @@ Commontator.configure do |config|
   #          This is not recommended, as it can cause confusion over deleted comments
   #          If using pagination, it can also cause comments to change pages
   # Default: nil (no filtering - all comments are visible)
-  config.comment_filter = nil
+  config.comment_filter = Commontator::Comment.arel_table[:deleted_at].eq(nil)
 
   # thread_read_proc
   # Type: Proc
