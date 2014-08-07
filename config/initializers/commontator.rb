@@ -93,12 +93,12 @@ Commontator.configure do |config|
   #          This is not recommended, as it can cause confusion over deleted comments
   #          If using pagination, it can also cause comments to change pages
   # Default: nil (no filtering - all comments are visible)
-  config.comment_filter = nil
+  config.comment_filter = Commontator::Comment.arel_table[:deleted_at].eq(nil)
 
   # thread_read_proc
   # Type: Proc
   # Arguments: a thread (Commontator::Thread), a user (acts_as_commontator)
-  # Returns: a Boolean, true iif the user should be allowed to read that thread
+  # Returns: a Boolean, true if the user should be allowed to read that thread
   # Note: can be called with a user object that is nil (if they are not logged in)
   # Default: lambda { |thread, user| true } (anyone can read any thread)
   config.thread_read_proc = lambda { |thread, user| true }
@@ -119,7 +119,7 @@ Commontator.configure do |config|
   #   :l (only if it's the latest comment)
   #   :n (never)
   # Default: :l
-  config.comment_editing = :l
+  config.comment_editing = :a
 
   # comment_deletion
   # Type: Symbol
@@ -180,7 +180,7 @@ Commontator.configure do |config|
   # If :l is selected, the "reply to thread" form will appear before the comments
   # Otherwise, it will appear after the comments
   # Default: :e
-  config.comment_order = :e
+  config.comment_order = :vl
 
   # comments_per_page
   # Type: Fixnum or nil
@@ -236,3 +236,9 @@ Commontator.configure do |config|
     app_routes.polymorphic_url(thread.commontable) }
 end
 
+Commontator::Comment.class_eval do
+    def can_be_voted_on_by?(user)
+      !user.nil? && user.is_commontator && user != creator &&\
+      thread.can_be_read_by?(user) && can_be_voted_on? && get_vote_by(user).nil?
+    end
+end

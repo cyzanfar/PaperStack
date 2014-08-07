@@ -14,5 +14,7 @@ $("#comment_<%= @comment.id %>_votes_span").html("<%= escape_javascript(
          :locals => {:comment => @comment,
                      :user => @user}) %>");
 
+$("#comment_<%= @comment.id.to_s %>_div").hide();
+
 <%= javascript_proc %>
 

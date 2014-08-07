@@ -57,7 +57,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
-    commontator (4.7.0)
+    commontator (4.7.2)
       jquery-rails
       rails (>= 3.1)
     devise (3.2.4)
@@ -169,7 +169,7 @@ DEPENDENCIES
   aws-sdk (~> 1.46.0)
   bootstrap-sass
   coffee-rails (~> 4.0.0)
-  commontator (~> 4.7.0)
+  commontator (~> 4.7.2)
   devise (~> 3.2.4)
   jbuilder (~> 2.0)
   jquery-rails
