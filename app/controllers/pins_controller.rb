@@ -2,6 +2,7 @@ class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+  impressionist actions: [:show], unique: [:session_hash]
   
   def index
     @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 15)
@@ -9,6 +10,8 @@ class PinsController < ApplicationController
 
   def show
     commontator_thread_show(@pin)
+    @pin = Pin.find(params[:id])
+   impressionist(@pin)
   end
 
   def new
