@@ -9,6 +9,10 @@ class Pin < ActiveRecord::Base
 	validates :document , presence: true
 	acts_as_commontable
 	is_impressionable
+	acts_as_taggable
+	# track user tag
+	acts_as_taggable_on :locations
+
     end
 
 

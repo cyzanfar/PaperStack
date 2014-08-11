@@ -5,7 +5,12 @@ class PinsController < ApplicationController
   impressionist actions: [:show], unique: [:session_hash]
   
   def index
-    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 15)
+    if params[:tag]
+
+       @pins = Pin.order("created_at DESC").paginate(:page => params[:page], :per_page => 15).tagged_with(params[:tag])
+    else
+       @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 15)
+    end
   end
 
   def show
@@ -56,6 +61,6 @@ class PinsController < ApplicationController
 
     
     def pin_params
-      params.require(:pin).permit(:description, :image, :document, :description_text, :paper)
+      params.require(:pin).permit(:description, :image, :document, :description_text, :paper, :tag_list)
     end
 end

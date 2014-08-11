@@ -9,5 +9,6 @@ class User < ActiveRecord::Base
   validates :name, presence: true
 
   acts_as_commontator
+  acts_as_tagger
 
 end

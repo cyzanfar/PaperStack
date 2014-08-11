@@ -14,8 +14,11 @@
                       <li><i>Document </i> <%= link_to "My document", @pin.document.url, target: "_blank" %></li> 
                   <% end %>
 
-                  <li><%= "#{@pin.impressionist_count} views" %></li>    
+                  <li><%= "#{@pin.impressionist_count} <strong>views</strong>".html_safe %></li>    
                   <li> Unique ip adress views <%= @pin.impressionist_count(:filter=>:ip_address) %></li>
+                  <li>
+                        Tags: <%= raw @pin.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+                  </li>
                     <% if @pin.user == current_user %>
                       <%= link_to edit_pin_path(@pin) do %>
                         <span class="glyphicon glyphicon-edit"></span>
