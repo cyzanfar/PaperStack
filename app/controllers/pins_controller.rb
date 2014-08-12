@@ -61,6 +61,6 @@ class PinsController < ApplicationController
 
     
     def pin_params
-      params.require(:pin).permit(:description, :image, :document, :description_text, :paper, :tag_list)
+      params.require(:pin).permit(:description, :image, :document, :description_text, :paper, :tag_list, :duedate )
     end
 end

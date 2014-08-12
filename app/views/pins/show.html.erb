@@ -24,6 +24,17 @@
                     <li>
                           Tags: <%= raw @pin.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
                     </li>
+
+                    <div id="due_date_timer"></div>
+                   <script>
+                  var year = <%= @pin.duedate.year %>;
+  var month = <%= @pin.duedate.month %>;
+  var day = <%= @pin.duedate.day %>;
+
+  var date = new Date(year, month, day);
+  $("#due_date_timer").countdown({until: date});
+                  </script>
+
                       <% if @pin.user == current_user %>
                         <%= link_to edit_pin_path(@pin) do %>
                           <span class="glyphicon glyphicon-edit"></span>

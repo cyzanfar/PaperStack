@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140811193523) do
+ActiveRecord::Schema.define(version: 20140812045000) do
 
   create_table "commontator_comments", force: true do |t|
     t.string   "creator_type"
@@ -95,6 +95,7 @@ ActiveRecord::Schema.define(version: 20140811193523) do
     t.datetime "document_updated_at"
     t.text     "description_text"
     t.text     "paper"
+    t.datetime "duedate"
   end
 
   add_index "pins", ["user_id"], name: "index_pins_on_user_id"

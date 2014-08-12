@@ -42,6 +42,10 @@
         <%= f.label :tag_list, "Tags (seperated by commas)" %>
         <%= f.text_field :tag_list %>
       </div>
+      <div class="form-group">
+        <%= f.label :duedate %>
+        <%= f.datetime_select :duedate %>
+      </div>
        <div class="form-group">
           <%= f.submit :class => 'btn btn-danger' %>
         </div>
