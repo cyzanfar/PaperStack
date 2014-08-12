@@ -1,4 +1,4 @@
- @import 'bootstrap';
+@import 'bootstrap';
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
 $body-bg:                                                   #ecf0f1;
@@ -9,7 +9,8 @@ $navbar-default-brand-color:      black;
 $brand-primary:                                    #c0392b;
 $jumbotron-bg:                                         white;
 $link-color: #e74c3c;
-@import 'bootstrap';
+ @import 'bootstrap';
+
 
 .center {
      text-align: center;
@@ -61,5 +62,6 @@ $link-color: #e74c3c;
 .note-background {
 	background: #27ae60;
 }
+
 
 
