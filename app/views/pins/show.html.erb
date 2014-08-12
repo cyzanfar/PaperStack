@@ -24,15 +24,15 @@
                     <li>
                           Tags: <%= raw @pin.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
                     </li>
-
-                    <div id="due_date_timer"></div>
+                    <li><strong>Due in:</strong></li>
+                    <div id="due_date_timer" style="height: 44px;"></div>
                    <script>
-                  var year = <%= @pin.duedate.year %>;
-  var month = <%= @pin.duedate.month %>;
-  var day = <%= @pin.duedate.day %>;
+                      var year = <%= @pin.duedate.year %>;
+                      var month = <%= @pin.duedate.month %>;
+                      var day = <%= @pin.duedate.day %>;
 
-  var date = new Date(year, month, day);
-  $("#due_date_timer").countdown({until: date});
+                      var date = new Date(year, month, day);
+                      $("#due_date_timer").countdown({until: date});
                   </script>
 
                       <% if @pin.user == current_user %>
@@ -43,10 +43,17 @@
                       <% end %>
                      
                     </ul>
+
+
                 </div>
+                
+
               </div> 
 
+              
+
             </div>
+           
           </div>
 
           <div class="panel-body scrollable-body">

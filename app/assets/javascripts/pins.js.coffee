@@ -8,3 +8,4 @@ $ ->
 			itemSelector: '.box'
 			isFitWidth: true
 
+			  
