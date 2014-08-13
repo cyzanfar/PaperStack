@@ -21,7 +21,7 @@ module Photoshare
     # config.i18n.default_locale = :de
 
     #required for heroku
-
+    config.assets.paths << "#{Rails}/vendor/assets/fonts"
      config.assets.initialize_on_precompile = false
 
 
