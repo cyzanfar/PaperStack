@@ -1,3 +1,7 @@
 == README
 
-First Rails project.
+PaperStack is a Ruby on Rails web application that helps students get peer-to-peer feedback on an essay. It allows students to comment on other student's essays and give feedback. It also allows for students to upvote or down vote essays, and has a countdown clock to give a sense of peer pressure.
+
+* The front-end was built using Bootstrap. Javascript and  JQuery were also used to improve the User Interface.
+ 
+* The application utilizes the Devise gem for authentication and user management, as well as Carrierwave for document upload and management.
